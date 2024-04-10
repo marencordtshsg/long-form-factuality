@@ -34,9 +34,9 @@ prompt_postamble = """\
 Provide as many specific details and examples as possible (such as names of \
 people, numbers, events, locations, dates, times, etc.)
 """
-openai_api_key = ''
-anthropic_api_key = ''
-serper_api_key = ''
+openai_api_key = os.getenv('OpenAI', '')
+anthropic_api_key = os.getenv('anthropic', '')
+serper_api_key = os.getenv('serper', '')
 random_seed = 1
 model_options = {
     'gpt_4_turbo': 'OPENAI:gpt-4-0125-preview',
